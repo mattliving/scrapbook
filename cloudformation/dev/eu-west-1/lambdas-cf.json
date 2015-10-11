@@ -1,0 +1,29 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "scrapbook lambdas",
+  "Parameters": {
+    "aaLambdaRoleArn": {
+      "Type": "String",
+      "Default": "arn:aws:iam::572414860721:role/dev-scrapbook-r-IamRoleLambda-FZEO3PLASHME"
+    }
+  },
+  "Resources": {
+    "lGreetingsHello": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Description": "",
+        "Handler": "aws_modules/greetings/hello/handler.handler",
+        "MemorySize": 1024,
+        "Runtime": "nodejs",
+        "Timeout": 6,
+        "Code": {
+          "S3Bucket": "jaws.dev.euwest1.scrapbook",
+          "S3Key": "JAWS/scrapbook/dev/lambdas/lGreetingsHello@1444563334373.zip"
+        },
+        "Role": {
+          "Ref": "aaLambdaRoleArn"
+        }
+      }
+    }
+  }
+}

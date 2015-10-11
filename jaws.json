@@ -1,0 +1,19 @@
+{
+  "name": "scrapbook",
+  "version": "0.0.1",
+  "location": "https://github.com/...",
+  "author": "",
+  "description": "",
+  "domain": "scrapbook",
+  "stages": {
+    "dev": [
+      {
+        "region": "eu-west-1",
+        "iamRoleArnLambda": "arn:aws:iam::572414860721:role/dev-scrapbook-r-IamRoleLambda-FZEO3PLASHME",
+        "iamRoleArnApiGateway": "arn:aws:iam::572414860721:role/dev-scrapbook-r-IamRoleApiGateway-DH78G5IHO81P",
+        "jawsBucket": "jaws.dev.euwest1.scrapbook",
+        "restApiId": "oig6ocrkac"
+      }
+    ]
+  }
+}
